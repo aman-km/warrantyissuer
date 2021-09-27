@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Kinza</title>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body >
+<div class="bg-green-300">
+<section class="text-gray-600 body-font relative" id="in" >
+  <div class="container px-5 py-24 mx-auto" >
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Kinza Steel Doors</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">We Provide You The Quality Steel Doors.</p>
+    </div>
+    <div class="lg:w-1/2 md:w-2/3 mx-auto">
+      <div class="flex flex-wrap -m-2">
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            <label for="name" class="leading-7 text-sm text-gray-600">Dealer Name</label>
+            <input type="text" id="dealer" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" autocomplete="off" name="dealersel" datalist="dealer">
+            <select name="dealersel">
+              <datalist id="dealer">
+              <option>Dealer 1</option>
+              <option>Dealer 2</option>
+              <option>Dealer 3</option>
+              <option>Dealer 4</option>
+              </datalist>
+          </select>
+
+          </div>
+        </div>
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            <label for="email" class="leading-7 text-sm text-gray-600">Customer Name</label>
+            <input type="text" id="customerid" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" autocomplete="off">
+          </div>
+        </div>
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            <label for="email" class="leading-7 text-sm text-gray-600">Location</label>
+            <input type="text" id="customerid" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required autocomplete="off" >
+          </div>
+        </div>
+                <div class="p-2 w-1/2">
+          <div class="relative">
+            <table>
+              <tr>
+                <td>
+            <label for="name" class="leading-7 text-sm text-gray-600">Model</label>
+            <input type="text" id="model" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" autocomplete="off">
+            <select id="modelsel">
+              <option>Model 1</option>
+              <option>Model 2</option>
+              <option>Model 3</option>
+              <option>Model 4</option>
+            </select>
+          </td>
+            </tr>
+            </table>
+          </div>
+        </div>
+          <div class="p-2 w-1/2">
+          <div class="relative">
+            <label for="email" class="leading-7 text-sm text-gray-600">Description</label>
+            <input type="text" id="customerid" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" style="height: 300px;width: 300px" autocomplete="off">
+          </div>
+        </div>
+                  <div class="p-2 w-1/2">
+          <div class="relative">
+            <label for="email" class="leading-7 text-sm text-gray-600">Warranty (start date) :</label>
+            <input type="date" id="customerid" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" autocomplete="off">
+          </div>
+        </div>
+                  <div class="p-2 w-1/2">
+          <div class="relative">
+            <label for="email" class="leading-7 text-sm text-gray-600">warranty (End Date) :</label>
+            <input type="date" id="customerid" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" autocomplete="off">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+<button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" onclick="save()">Issue</button>
+
+</body>
+<script>
+
+var element = document.getElementById('in');
+var worker = html2pdf(); 
+var customerId = document.getElementById('customerid').value;
+var dealer = document.getElementById('dealer').value;
+var model = document.getElementById('model').value;
+var dealersel = document.getElementById('dealersel').value;
+var modelsel = document.getElementById('modelsel').value;
+
+
+
+function save(){
+
+html2pdf(element);
+var worker = html2pdf().from(element).save();
+
+
+localStorage.setItem("id", customerId);
+
+
+</script>
+</html>
